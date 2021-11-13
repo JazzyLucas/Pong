@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Pong Game</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1280px; height: 720px; background: #1B093C"></canvas>
+    <script src="Build/PongGame.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/PongGame.data.gz",
+        frameworkUrl: "Build/PongGame.framework.js.gz",
+        codeUrl: "Build/PongGame.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "JazzApps",
+        productName: "Pong Game",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
